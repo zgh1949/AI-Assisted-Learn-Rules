@@ -42,14 +42,28 @@ Initialize → Break down tasks → Start a task → Explain background → Huma
 ```
 
 ### 3.1 Initialize (first session)
-Produce the following in `docs/`, all required:
+Initialization runs in three phases: **interview for requirements → confirm tech design → produce the docs**. Never produce docs before the interview is done.
+
+**Phase A: Requirements interview (the AI proactively asks; one group of questions at a time, see §7)**
+Ask these 4 things in order:
+1. **Learning goals**: what do you want to improve through this project? (e.g. mastering a tech stack, architecture design, a type of business domain)
+2. **Business requirements**: what project are you building? Core features? (e.g. "a Xiaohongshu-like backend" → users, content publishing, feed, likes/comments/follows)
+3. **Tech stack preference**: any stack you want to use or learn? If none, the AI offers 2–3 options to choose from
+4. **Constraints**: runtime environment, data scale, deployment needs, learning timeframe, etc.
+
+The AI consolidates the answers into `docs/project/overview.md` (business requirements doc; template in §8).
+
+**Phase B: Confirm the tech design**
+Based on the requirements, the AI drafts `docs/project/architecture.md` (tech stack choice, module split, data model, key APIs; template in §8) and confirms it with the human before finalizing.
+
+**Phase C: Produce the 5 docs**
 1. Project design docs (`docs/project/`: overview / architecture / structure)
 2. Task backlog (`docs/tasks/backlog.md`)
 3. Progress master (`docs/progress.md`)
 4. Root `AGENTS.md` (a slim pointer to this document)
 5. Teaching notes directory skeleton (`docs/knowledge/`)
 
-**Completion criterion**: all 5 items above are on disk, and the progress master is marked `ready to break down`.
+**Completion criterion**: the interview and the tech design are both confirmed, all 5 items above are on disk, and the progress master is marked `ready to break down`.
 
 ### 3.2 Break down tasks
 Split the development goal into tasks and write them to the backlog. See §4 for rules.
@@ -131,6 +145,48 @@ project root/
 ---
 
 ## 8. Templates
+
+### Business requirements doc template (`docs/project/overview.md`)
+
+```markdown
+# <Project name> Business Requirements
+
+- Learning goals: <what you want to improve through this project>
+- Overview: <one-line summary>
+
+## Core features
+- Feature 1: <description>
+- Feature 2: <description>
+
+## Tech stack
+- Language/framework: <choice>
+- Storage: <database, etc.>
+
+## Constraints
+- Runtime / data scale / deployment: <notes>
+```
+
+### Tech design doc template (`docs/project/architecture.md`)
+
+```markdown
+# <Project name> Tech Design
+
+## Tech stack choice
+| Area | Choice | Why |
+|------|--------|-----|
+| Language/framework | | |
+| Database | | |
+
+## Modules
+- Module 1: <responsibility>
+- Module 2: <responsibility>
+
+## Data model
+- Entity 1: <fields>
+
+## Key APIs
+- <METHOD> <path>: <description>
+```
 
 ### Task file template (`docs/tasks/Txxx-xxx.md`)
 

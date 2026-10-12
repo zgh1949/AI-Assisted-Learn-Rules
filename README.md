@@ -35,7 +35,7 @@ Type in the chat:
 
 > **"Initialize"**
 
-The AI will generate 5 initialization artifacts:
+The AI will first **interview you about your project** (learning goals, business requirements, tech stack preference, constraints), then confirm the tech design with you, and finally generate 5 initialization artifacts:
 
 | # | Artifact | Path |
 |---|----------|------|
@@ -84,7 +84,7 @@ my-project/
 
 > **「初始化」**
 
-AI 会自动生成 5 项初始化产物：
+AI 会先**访谈你的项目需求**（学习目标、业务需求、技术栈偏好、约束边界），再与你确认技术设计，最后自动生成 5 项初始化产物：
 
 | # | 产物 | 路径 |
 |---|------|------|
