@@ -16,12 +16,11 @@ Create an empty project folder (e.g. `my-project`) — this is where you and the
 
 ### Step 2: Add the rules to your project
 
-Copy either `AI-RULES.en.md` (English) or `AI-RULES.zh-cn.md` (Chinese) into your project as `docs/AI-RULES.md` (create the `docs/` folder if it doesn't exist):
+Copy either `AI-RULES.en.md` (English) or `AI-RULES.zh-cn.md` (Chinese) into the empty folder — no renaming, no extra folders:
 
 ```
 my-project/
-└── docs/
-    └── AI-RULES.md     # copied from this repo
+└── AI-RULES.en.md      # or AI-RULES.zh-cn.md
 ```
 
 **This file is the AI's playbook** — the AI reads it at the start of every session and follows it strictly.
@@ -66,12 +65,11 @@ Common commands: `Break down tasks` / `Start Txxx` / `I finished Txxx` / `Progre
 
 ### 第 2 步：把规则放进项目
 
-选择中文版 `AI-RULES.zh-cn.md` 或英文版 `AI-RULES.en.md`，复制一份改名为 `AI-RULES.md`，放到你项目的 `docs/` 目录下（没有 `docs/` 就自己建一个）：
+选择中文版 `AI-RULES.zh-cn.md` 或英文版 `AI-RULES.en.md`，直接复制进空文件夹即可——不用改名，也不用建子文件夹：
 
 ```
 my-project/
-└── docs/
-    └── AI-RULES.md     # 从本仓库复制
+└── AI-RULES.en.md      # 或 AI-RULES.zh-cn.md
 ```
 
 **这份文件就是 AI 的工作手册**，AI 会在每个会话开始时先读它，并严格遵守。
